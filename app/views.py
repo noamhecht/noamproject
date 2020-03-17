@@ -51,40 +51,11 @@ def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.is_active = False
-            user.save()
-            current_site = get_current_site(request)
-            subject = 'Activate Your Account'
-            message = render_to_string('app/account_activation_email.html', {
-                'user': user,
-                'domain': current_site.domain,
-                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                'token': account_activation_token.make_token(user),
-            })
-            user.email_user(subject, message)
-            return redirect('account_activation_sent')
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Your account has been created! You are now able to log in')
+            return redirect('login')
     else:
-        form = SignUpForm(request.POST)
+        form = SignUpForm()
     return render(request, 'app/signup.html', {'form': form})
 
-
-def account_activation_sent(request):
-    return render(request, 'app/account_activation_sent.html')
-
-
-def activate(request, uidb64, token):
-    try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
-        user = User.objects.get(pk=uid)
-    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
-        user = None
-
-    if user is not None and account_activation_token.check_token(user, token):
-        user.is_active = True
-        user.musician.email_confirmed = True
-        user.save()
-        login(request, user)
-        return redirect('index')
-    else:
-        return render(request, 'account_activation_invalid.html')

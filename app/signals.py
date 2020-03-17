@@ -4,12 +4,12 @@ from django.dispatch import receiver
 from .models import Musician
 
 
-@receiver(post_save, sender=User)
-def create_musician(sender, instance, created, **kwargs):
-    if created:
-        Musician.objects.create(user=instance)
-
-
-@receiver(post_save, sender=User)
-def save_musician(sender, instance, **kwargs):
-    instance.musician.save()
+# @receiver(post_save, sender=User)
+# def create_musician(sender, instance, created, **kwargs):
+#     if created:
+#         Musician.objects.create(user=instance)
+#
+#
+# @receiver(post_save, sender=User)
+# def save_musician(sender, instance, **kwargs):
+#     instance.musician.save()

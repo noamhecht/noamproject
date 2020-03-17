@@ -5,6 +5,7 @@ from .models import Musician
 
 
 class SignUpForm(UserCreationForm):
+
     email = forms.EmailField()
 
     class Meta:

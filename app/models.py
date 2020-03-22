@@ -5,6 +5,7 @@ import birthday
 from enum import Enum
 import uuid
 from .utils import InstrumentTypes, PlayingLevelTypes
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Musician(models.Model):
@@ -12,6 +13,12 @@ class Musician(models.Model):
     image = models.ImageField(default='default.jpg', upload_to='musician_pics')
     instrument = models.IntegerField(choices=InstrumentTypes.choices(), default=InstrumentTypes.GUITAR)
     playing_level = models.IntegerField(choices=PlayingLevelTypes.choices(), default=PlayingLevelTypes.LOW)
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    phone = PhoneNumberField(null=False, blank=False, unique=True)
+    birthday = birthday.fields.BirthdayField()
+
+    objects = birthday.managers.BirthdayManager()
 
     def __str__(self):
         return f'{self.user.username} Musician'

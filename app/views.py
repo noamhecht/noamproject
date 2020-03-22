@@ -59,3 +59,10 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'app/signup.html', {'form': form})
 
+
+def search(request):
+    return render(request, 'app/search.html',)
+
+
+def about(request):
+    return render(request, 'app/about.html',)

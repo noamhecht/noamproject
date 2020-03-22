@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'channels',
     'chat',
+    'phonenumber_field',
     'app.apps.AppConfig',
     'crispy_forms',
     'django.contrib.admin',

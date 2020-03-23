@@ -25,4 +25,10 @@ class UserUpdateForm(forms.ModelForm):
 class MusicianUpdateForm(forms.ModelForm):
     class Meta:
         model = Musician
-        fields = ['instrument', 'playing_level', 'image', ]
+        fields = ['instrument', 'playing_level', 'image']
+
+
+class SearchForm(forms.ModelForm):
+    class Meta:
+        model = Musician
+        fields = ['instrument', 'playing_level']

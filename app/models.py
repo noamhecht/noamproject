@@ -11,8 +11,10 @@ from phonenumber_field.modelfields import PhoneNumberField
 class Musician(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='musician_pics')
-    instrument = models.IntegerField(choices=InstrumentTypes.choices(), default=InstrumentTypes.GUITAR)
-    playing_level = models.IntegerField(choices=PlayingLevelTypes.choices(), default=PlayingLevelTypes.LOW)
+    instrument = models.IntegerField(choices=InstrumentTypes.choices(), default=InstrumentTypes.GUITAR,
+                                     blank=True, null=True)
+    playing_level = models.IntegerField(choices=PlayingLevelTypes.choices(), default=PlayingLevelTypes.LOW,
+                                        blank=True, null=True)
     # first_name = models.CharField(max_length=200)
     # last_name = models.CharField(max_length=200)
     # phone = PhoneNumberField(null=False, blank=False, unique=True)

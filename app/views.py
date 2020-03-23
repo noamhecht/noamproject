@@ -6,7 +6,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from app.forms import SignUpForm, UserUpdateForm, MusicianUpdateForm
+from app.forms import SignUpForm, UserUpdateForm, MusicianUpdateForm, SearchForm
 from django.contrib.auth.decorators import login_required
 from app.tokens import account_activation_token
 from django.utils.encoding import force_bytes
@@ -60,8 +60,24 @@ def signup(request):
     return render(request, 'app/signup.html', {'form': form})
 
 
+@login_required
 def search(request):
-    return render(request, 'app/search.html',)
+    title = 'Search For Musicians'
+    form = SearchForm(request.POST or None)
+    context = {
+        "title": title,
+        "form": form,
+    }
+    if request.method == 'POST':
+        queryset = Musician.objects.all().order_by('user_id').filter(
+            instrument__icontains=form['instrument'].value(),
+            playing_level__icontains=form['playing_level'].value())
+        context = {
+            "title": title,
+            "queryset": queryset,
+            "form": form,
+        }
+    return render(request, 'app/search.html', context)
 
 
 def about(request):

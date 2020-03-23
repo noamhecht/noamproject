@@ -1,5 +1,47 @@
 {% extends "app/base.html" %}
+{% load crispy_forms_tags %}
 {% block content %}
-
-
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 {
+  width: 100%;
+  background-color: #f1f1c1;
+}
+</style>
+</head>
+<body>
+    <div class="search-section">
+      <h1 class="title">{{title}}</h1>
+      <form method="post" action="">
+          {% csrf_token %}
+          {{form|crispy}}
+          <input class="btn btn-primary" type="submit" value="Search" />
+      </form>
+      <br>
+      <br>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>User Name</th>
+                <th>Instrument</th>
+                <th>Playing_level</th>
+            </tr>
+            {% for instance in queryset %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{instance.user.username}}</td>
+                <td>{{instance.instrument}}</td>
+                <td>{{instance.playing_level}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 {% endblock content %}

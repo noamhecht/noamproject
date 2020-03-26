@@ -1,11 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
-import birthday
-from enum import Enum
-import uuid
 from .utils import InstrumentTypes, PlayingLevelTypes
-from phonenumber_field.modelfields import PhoneNumberField
+import re
 
 
 class Musician(models.Model):
@@ -15,12 +12,10 @@ class Musician(models.Model):
                                      blank=True, null=True)
     playing_level = models.IntegerField(choices=PlayingLevelTypes.choices(), default=PlayingLevelTypes.LOW,
                                         blank=True, null=True)
-    # first_name = models.CharField(max_length=200)
-    # last_name = models.CharField(max_length=200)
-    # phone = PhoneNumberField(null=False, blank=False, unique=True)
-    # birthday = birthday.fields.BirthdayField()
-
-    # objects = birthday.managers.BirthdayManager()
+    # first_name = models.CharField(max_length=20, default="---")
+    # last_name = models.CharField(max_length=20, default="---")
+    # phone = re.compile("^(05)[0-4][0-9]{7}$")
+    # birthday = models.DateField(blank=True, null=True)
 
     def __str__(self):
         return f'{self.user.username} Musician'

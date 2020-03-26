@@ -12,10 +12,10 @@ class Musician(models.Model):
                                      blank=True, null=True)
     playing_level = models.IntegerField(choices=PlayingLevelTypes.choices(), default=PlayingLevelTypes.LOW,
                                         blank=True, null=True)
-    # first_name = models.CharField(max_length=20, default="---")
-    # last_name = models.CharField(max_length=20, default="---")
+    first_name = models.CharField(max_length=20, blank=True, null=True)
+    last_name = models.CharField(max_length=20, blank=True, null=True)
     # phone = re.compile("^(05)[0-4][0-9]{7}$")
-    # birthday = models.DateField(blank=True, null=True)
+    birthday = models.DateField(blank=True, null=True)
 
     def __str__(self):
         return f'{self.user.username} Musician'

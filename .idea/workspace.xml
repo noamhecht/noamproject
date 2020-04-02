@@ -2,32 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ac28862-6083-4dea-891b-9cd88f95b77a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_auto_20200129_1445.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20200129_1507.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_auto_20200129_1507.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0005_auto_20200129_1507.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0006_remove_musician_birthday.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0007_auto_20200208_1050.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0008_remove_musician_phone_number.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0009_auto_20200208_2316.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0010_auto_20200208_2317.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0011_musician_email_confirmed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0012_auto_20200229_2252.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0013_auto_20200229_2259.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0014_remove_musician_email_confirmed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0015_auto_20200323_1451.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0016_auto_20200323_1459.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0017_auto_20200324_1809.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0018_auto_20200324_1814.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0019_auto_20200324_1815.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0020_remove_musician_birthday.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0021_musician_birthday.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0022_auto_20200326_1945.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -108,24 +82,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="478" />
-          <entry key="py" value="893" />
+          <entry key="py" value="910" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="478" />
-          <entry key="Python" value="893" />
+          <entry key="Python" value="910" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            <state relative-caret-position="324">
+              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -133,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="327">
@@ -227,7 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="980" />
@@ -602,16 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -619,6 +583,16 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
             <marker date="1585675833413" expanded="true" signature="189:216" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'channels',
     'chat',
-    'phonenumber_field',
+    'cities_light',
     'app.apps.AppConfig',
     'crispy_forms',
     'django.contrib.admin',
@@ -147,6 +147,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'
 
-
-
+CITIES_LIGHT_TRANSLATION_LANGUAGES = ['fr', 'en']
+CITIES_LIGHT_INCLUDE_COUNTRIES = ['IL']
+CITIES_LIGHT_INCLUDE_CITY_TYPES = ['PPL', 'PPLA', 'PPLA2', 'PPLA3', 'PPLA4', 'PPLC', 'PPLF', 'PPLG', 'PPLL', 'PPLR', 'PPLS', 'STLMT',]
 

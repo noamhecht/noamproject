@@ -36,7 +36,7 @@ class MusicianUpdateForm(forms.ModelForm):
     class Meta:
         model = Musician
         birthday = forms.DateField(widget=DateInput)
-        fields = ['birthday', 'instrument', 'playing_level', 'image']
+        fields = ['birthday', 'city', 'instrument', 'playing_level', 'image']
 
 
 class SearchForm(forms.ModelForm):

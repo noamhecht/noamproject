@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
 from .utils import InstrumentTypes, PlayingLevelTypes
+from cities_light.models import City
 
 
 class Musician(models.Model):
@@ -13,6 +14,7 @@ class Musician(models.Model):
                                         blank=True, null=True)
     # ('^(05)[0-4][0-9]{7}$')
     birthday = models.DateField(blank=True, null=True)
+    city = models.ForeignKey(City, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return f'{self.user.username} Musician'

@@ -42,4 +42,4 @@ class MusicianUpdateForm(forms.ModelForm):
 class SearchForm(forms.ModelForm):
     class Meta:
         model = Musician
-        fields = ['instrument', 'playing_level']
+        fields = ['instrument', 'playing_level', 'city']

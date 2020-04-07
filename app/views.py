@@ -71,7 +71,8 @@ def search(request):
     if request.method == 'POST':
         queryset = Musician.objects.all().order_by('user_id').filter(
             instrument__icontains=form['instrument'].value(),
-            playing_level__icontains=form['playing_level'].value()).all()[:5]
+            playing_level__icontains=form['playing_level'].value(),
+            city__id__icontains=form['city'].value()).all()[:5]
         context = {
             "title": title,
             "queryset": queryset,

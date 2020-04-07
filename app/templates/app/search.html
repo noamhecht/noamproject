@@ -33,13 +33,17 @@ table#t01 {
                 <th>User Name</th>
                 <th>Instrument</th>
                 <th>Playing_level</th>
+                <th>Region</th>
+                <th>City</th>
             </tr>
             {% for instance in queryset %}
             <tr>
                 <td>{{forloop.counter}}</td>
                 <td>{{instance.user.username}}</td>
-                <td>{{instance.instrument}}</td>
-                <td>{{instance.playing_level}}</td>
+                <td>{{instance.get_instrument_display}}</td>
+                <td>{{instance.get_playing_level_display}}</td>
+                <td>{{instance.city.region}}</td>
+                <td>{{instance.city}}</td>
             </tr>
             {% endfor %}
         </table>

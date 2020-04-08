@@ -14,11 +14,10 @@ class SignUpForm(UserCreationForm):
     email = forms.EmailField()
     first_name = forms.CharField(max_length=20)
     last_name = forms.CharField(max_length=20)
-    birth = forms.DateField(widget=DateInput)
 
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'birth', 'email', 'password1', 'password2', )
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
 
 
 class UserUpdateForm(forms.ModelForm):
@@ -33,10 +32,12 @@ class UserUpdateForm(forms.ModelForm):
 
 
 class MusicianUpdateForm(forms.ModelForm):
+
+    birthday = forms.DateField(widget=DateInput)
+
     class Meta:
         model = Musician
-        birthday = forms.DateField(widget=DateInput)
-        fields = ['birthday', 'city', 'instrument', 'playing_level', 'image']
+        fields = ['birthday', 'phone_number', 'city', 'instrument', 'playing_level', 'image']
 
 
 class SearchForm(forms.ModelForm):

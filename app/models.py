@@ -4,6 +4,8 @@ from PIL import Image
 from .utils import InstrumentTypes, PlayingLevelTypes
 from cities_light.models import City, Region
 from django.core.validators import RegexValidator
+from django.core.exceptions import ValidationError
+import datetime
 
 
 class Musician(models.Model):
@@ -33,5 +35,9 @@ class Musician(models.Model):
             img.thumbnail(output_size)
             img.save(self.image.path)
 
-
+    # def clean(self, *args, **kwargs):
+    #     super(Musician, self).clean(*args, **kwargs)
+    #
+    #     if self.birthday > datetime.date.today():
+    #         raise ValidationError('Birthday can't be in the future')
 

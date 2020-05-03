@@ -77,30 +77,9 @@ class Sidepanel extends React.Component {
             <img
               id="profile-img"
               src="http://emilcarlsson.se/assets/mikeross.png"
-              className="online"
               alt=""
             />
-            <p>Mike Ross</p>
-            <i
-              className="fa fa-chevron-down expand-button"
-              aria-hidden="true"
-            />
-            <div id="status-options">
-              <ul>
-                <li id="status-online" className="active">
-                  <span className="status-circle" /> <p>Online</p>
-                </li>
-                <li id="status-away">
-                  <span className="status-circle" /> <p>Away</p>
-                </li>
-                <li id="status-busy">
-                  <span className="status-circle" /> <p>Busy</p>
-                </li>
-                <li id="status-offline">
-                  <span className="status-circle" /> <p>Offline</p>
-                </li>
-              </ul>
-            </div>
+            <p>{this.props.username}</p>
             <div id="expanded">
               {this.props.loading ? (
                 <Spin indicator={antIcon} />

@@ -177,7 +177,7 @@ REST_FRAMEWORK = {
     ),
 }
 CORS_ORIGIN_WHITELIST = (
-    'https://localhost:1234',
+    'http://localhost:1234',
     'https://10.0.0.8:1234'
 )
 

@@ -63,9 +63,8 @@ class Sidepanel extends React.Component {
       return (
         <Contact
           key={c.id}
-          name="Harvey Specter"
-          picURL="http://emilcarlsson.se/assets/louislitt.png"
-          status="busy"
+          name={c.id}
+          picURL="https://cdn0.iconfinder.com/data/icons/web-development-71/64/z-96-512.png"
           chatURL={`/${c.id}`}
         />
       );
@@ -147,9 +146,9 @@ class Sidepanel extends React.Component {
             <i className="fa fa-user-plus fa-fw" aria-hidden="true" />
             <span>Create chat</span>
           </button>
-          <button id="settings">
-            <i className="fa fa-cog fa-fw" aria-hidden="true" />
-            <span>Settings</span>
+          <button id="backHome">
+            <i class="fa fa-home" aria-hidden="true" />
+            <span>Home Page</span>
           </button>
         </div>
       </div>

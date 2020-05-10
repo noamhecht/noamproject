@@ -2,11 +2,9 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from django.db import models
 
-User = get_user_model()
-
 
 class Contact(models.Model):
-    user = models.ForeignKey(
+    user = models.OneToOneField(
         User, related_name='friends', on_delete=models.CASCADE)
     friends = models.ManyToManyField('self', blank=True)
 

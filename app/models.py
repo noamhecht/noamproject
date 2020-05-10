@@ -23,7 +23,7 @@ class Musician(models.Model):
     # region = models.ForeignKey(Region, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
-        return f'{self.user.username} Musician'
+        return self.user.username
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)

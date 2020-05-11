@@ -5,7 +5,7 @@ from django.db import models
 
 class Contact(models.Model):
     user = models.OneToOneField(
-        User, related_name='friends', on_delete=models.CASCADE)
+        User, on_delete=models.CASCADE)
     friends = models.ManyToManyField('self', blank=True)
 
     def __str__(self):

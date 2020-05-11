@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'cities_light',
     'app.apps.AppConfig',
+    'chat.apps.ChatConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,7 +52,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
 
-    'chat'
 ]
 
 MIDDLEWARE = [

@@ -12,7 +12,7 @@ class Profile extends React.Component {
       <div className="contact-profile">
         {this.props.username !== null ? (
           <Hoc>
-            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+            <img src="https://d2hqr1s9kfm9jo.cloudfront.net/production/images/sales_agents/17095/data.original.?1577457456" alt="" />
             <p>{this.props.username}</p>
           </Hoc>
         ) : null}

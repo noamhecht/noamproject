@@ -76,7 +76,7 @@ class Sidepanel extends React.Component {
           <div className="wrap">
             <img
               id="profile-img"
-              src="http://emilcarlsson.se/assets/mikeross.png"
+              src="https://d2hqr1s9kfm9jo.cloudfront.net/production/images/sales_agents/17095/data.original.?1577457456"
               alt=""
             />
             <p>{this.props.username}</p>

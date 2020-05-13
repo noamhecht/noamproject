@@ -1,20 +1,8 @@
-from django.http import HttpResponse
-from django.template import loader
 from .models import Musician
-from django.http import Http404
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from app.forms import SignUpForm, UserUpdateForm, MusicianUpdateForm, SearchForm
 from django.contrib.auth.decorators import login_required
-from django.utils.encoding import force_bytes
-from django.utils.http import urlsafe_base64_encode
-from django.template.loader import render_to_string
-from django.contrib.sites.shortcuts import get_current_site
-from django.contrib.auth.models import User
-from django.utils.encoding import force_text
-from django.utils.http import urlsafe_base64_decode
 
 
 @login_required
@@ -43,7 +31,7 @@ def profile(request):
 
 
 def index(request):
-    return render(request, 'app/index.html',)
+    return render(request, 'app/base.html',)
 
 
 def signup(request):
@@ -79,6 +67,3 @@ def search(request):
         }
     return render(request, 'app/search.html', context)
 
-
-def about(request):
-    return render(request, 'app/about.html',)

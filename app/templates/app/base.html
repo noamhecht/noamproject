@@ -29,7 +29,6 @@
            <div class="collapse navbar-collapse" id="navbarToggle">
             <!-- Navbar Left Side -->
             <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
               {% if user.is_authenticated %}
                 <a class="nav-item nav-link" href="{% url 'search' %}">Find Musicians</a>
                 <a class="nav-item nav-link" href="http://localhost:1234">Chat</a>

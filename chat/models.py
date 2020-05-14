@@ -28,4 +28,8 @@ class Chat(models.Model):
     messages = models.ManyToManyField(Message, blank=True)
 
     def __str__(self):
-        return "{}".format(self.pk)
+        str = ""
+        for p in self.participants.all():
+            str = str + " " + p.user.username
+        return str
+

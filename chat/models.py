@@ -14,7 +14,7 @@ class Contact(models.Model):
 
 class Message(models.Model):
     contact = models.ForeignKey(
-        Contact, related_name='messages', on_delete=models.CASCADE, null=True)
+        Contact, related_name='messages', on_delete=models.CASCADE)
     content = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
 

@@ -25,7 +25,7 @@ SECRET_KEY = 'kq-b2jmn*25n(jh-#se3tx01qfhzjmob_c47udc8xyy%gzg^3u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['musicians-app.herokuapp.com']
 
 
 # Application definition

@@ -133,12 +133,7 @@ class Sidepanel extends React.Component {
             </div>
           </div>
         </div>
-        <div id="search">
-          <label htmlFor="">
-            <i className="fa fa-search" aria-hidden="true" />
-          </label>
-          <input type="text" placeholder="Search Chats..." />
-        </div>
+
         <div id="contacts">
           <ul>{activeChats}</ul>
         </div>

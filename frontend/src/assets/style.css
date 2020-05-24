@@ -232,6 +232,7 @@ body {
     border-radius: 50%;
     float: left;
     margin-right: 10px;
+    filter: brightness(0) invert(1);
   }
   @media screen and (max-width: 735px) {
     #frame #sidepanel #contacts ul li.contact .wrap img {
